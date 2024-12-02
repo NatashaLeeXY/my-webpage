@@ -1,7 +1,7 @@
 const data = {
-    title: "Welcome to CS3210 Template Engine Lab",
-    content: "This is a simple template engine demonstration.",
-    author: "Dr. Red",
+    title: "Welcome to Natasha Lee's Github Webpage",
+    content: "This is for Lab 9- Template Engine Lab",
+    author: "Natasha Lee",
 };
 
 function renderTemplate(template, data) {
