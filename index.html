@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Natasha Lee's Webpage</title>
     <style>
-        /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
             background-color: #f0f8ff;
@@ -16,14 +15,10 @@
         }
 
         header {
-            background-color: #4caf50;
-            color: white;
             text-align: center;
             padding: 20px 0;
-        }
-
-        h1 {
-            margin: 0;
+            font-weight: bold;
+            color: #0000FF; 
         }
 
         main {
@@ -36,13 +31,15 @@
         #app {
             text-align: center;
             background-color: white;
-            padding: 20px;
-            border-radius: 8px;
+            padding: 30px;
+            border-radius: 15px; 
             box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            width: 80%;
+            max-width: 500px;
         }
 
         h3 {
-            color: #4caf50;
+            color: #0000FF; 
             font-size: 24px;
         }
 
@@ -55,22 +52,18 @@
 
 <body>
     <header>
-        <h1>Welcome to Natasha Lee's Webpage</h1>
+        Welcome to Natasha Lee's Webpage
     </header>
     <main>
-        <div id="app">
-            <!-- Dynamic content will be rendered here -->
-        </div>
+        <div id="app"></div>
     </main>
     <script>
-        // Define the data object
         const data = {
             title: "Welcome to Natasha Lee's Github Webpage",
             content: "This is for Lab 9- Template Engine Lab",
             author: "Natasha Lee",
         };
 
-        // Function to render the template
         function renderTemplate(template, data) {
             for (const key in data) {
                 const regex = new RegExp('{{' + key + '}}', 'g');
@@ -79,14 +72,12 @@
             return template;
         }
 
-        // Define the template string
         const template = `
             <h3>{{title}}</h3>
             <p>{{content}}</p>
             <p>Author: {{author}}</p>
         `;
 
-        // Render the template and insert it into the DOM
         const app = document.getElementById('app');
         app.innerHTML = renderTemplate(template, data);
     </script>
